@@ -11,8 +11,9 @@ class Post < ActiveRecord::Base
       if category_attribute[:name] != ""
       binding.pry
 
-      category = Category.find_or_create_by(category_attribute)
-      self.categories << category
+        category = Category.find_or_create_by(category_attribute)
+        self.categories << category
+      end
     end
   end
 end
